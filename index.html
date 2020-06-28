@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>My Docs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">My Docs</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#app-for-getting-started-with-tech" class="nav-link">App for Getting started with Tech</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#create-a-new-project-in-flutter" class="nav-link">Create a new project in flutter</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#main-screens-of-the-app" class="nav-link">Main Screens of the App</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#first-screen" class="nav-link">First Screen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#second-screen-of-the-app" class="nav-link">Second Screen Of the app:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#webview" class="nav-link">Webview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#third-screen" class="nav-link">Third Screen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#fourth-screen" class="nav-link">Fourth Screen:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#conclusion" class="nav-link">Conclusion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="app-for-getting-started-with-tech">App for Getting started with Tech</h1>
+<p>Lets create a cross platform app which contains links to various important resources to get started with becoming a
+developer</p>
+<h1 id="prerequisites">Prerequisites</h1>
+<p>Install flutter from the link below</p>
+<p><a href="https://flutter.dev/docs/get-started/install">Install flutter</a></p>
+<p>What is Flutter ??</p>
+<p>Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.</p>
+<p>Say what?? a single framework for web , mobile , desktop ?? Even on a Raspberry Pi : &gt;</p>
+<p>The basics of Flutter can be learned in the link below</p>
+<p><a href="https://github.com/HariPranav/Flutter">Flutter Basics</a></p>
+<p><a href="https://github.com/HariPranav/flutter_learning_path">Flutter Advanced</a></p>
+<h1 id="create-a-new-project-in-flutter">Create a new project in flutter</h1>
+<pre><code>$ flutter create my_project_name
+</code></pre>
+<h1 id="main-screens-of-the-app">Main Screens of the App</h1>
+<h1 id="first-screen">First Screen</h1>
+<p><img alt="Carousel" src="https://raw.githubusercontent.com/HariPranav/BENIMAGES/master/Screenshot_1562742355.png" /></p>
+<h3 id="carousel-widget">Carousel Widget</h3>
+<p>This is the first screen that the user is greeted with , it contains three images with a scrollable list of items</p>
+<p>Go to the pubspec yaml and add the dependencies</p>
+<p>dependencies:</p>
+<p>flutter:</p>
+<pre><code> sdk: flutter
+</code></pre>
+<p>carousel_pro: ^1.0.0</p>
+<p>webview_flutter:</p>
+<p>Then import this package in your main.dart along with the code below to create a carousel</p>
+<pre><code>import 'package:flutter/material.dart';
+import 'package:carousel_pro/carousel_pro.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+
+void main(List&lt;String&gt; args) {
+runApp(
+    MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: MyApp(),
+    ),
+);
+}
+
+class MyApp extends StatefulWidget {
+@override
+_State createState() =&gt; _State();
+}
+
+class _State extends State&lt;MyApp&gt; {
+@override
+Widget build(BuildContext context) {
+    return MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Scaffold(
+        body: new Carousel(
+        boxFit: BoxFit.fitWidth,
+        images: [
+            new NetworkImage("https://dogecoin.com/imgs/doge.png"),
+            new NetworkImage(
+                'https://lh4.googleusercontent.com/njmacjXG5DhDcvSpCy6xd584sMRXIwoFxXliEZitBH4OqvK4IT_Zfi6DOuUQcsZNBeURhMtJoBhpLiiTqq6HL3yWmV9Kbpeq0LNbtxLANgAoYfk8rzJMsBYrzSKfTxyQp5Fw499f'),
+            new NetworkImage(
+                'https://blockchainedu.org/static/media/ben-full-logo.3f23ec07.png'),
+        ],
+        animationDuration: Duration(seconds: 5),
+        ),
+        floatingActionButton: FloatingActionButton(
+        onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) =&gt; SecondScreen()));
+        },
+        child: Icon(Icons.arrow_forward),
+        backgroundColor: Colors.black,
+        ),
+    ),
+    );
+}
+}
+</code></pre>
+<h1 id="second-screen-of-the-app">Second Screen Of the app:</h1>
+<p><img alt="Second Screen" src="https://raw.githubusercontent.com/HariPranav/BENIMAGES/master/Screenshot_20200629-014137.jpg" /></p>
+<p>In the body field of the material App we have a list view widget , which is basically a scrollable list of items ,
+It can have many children</p>
+<p>Next we have a card which is wrapped with an inkWell so that the entire card when clicked anywhere can open a link or a website , We use the onTapped property to navigate to a specific webview in the app without shifting to a browser</p>
+<pre><code>class SecondScreen extends StatefulWidget {
+    @override
+    _SecondScreenState createState() =&gt; _SecondScreenState();
+    }
+
+    class _SecondScreenState extends State&lt;SecondScreen&gt; {
+    @override
+    Widget build(BuildContext context) {
+        return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+            backgroundColor: Colors.black,
+            appBar: AppBar(
+            title: Text('Free Courses'),
+            backgroundColor: Colors.black,
+            ),
+            floatingActionButton: FloatingActionButton(
+            onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) =&gt; Documentation()));
+            },
+            child: Icon(Icons.arrow_forward),
+            backgroundColor: Colors.black,
+            ),
+            body: ListView(
+            children: &lt;Widget&gt;[
+                InkWell(
+                onTap: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) =&gt; Ben()));
+                },
+                child: Card(
+                    child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: &lt;Widget&gt;[
+                        ListTile(
+                        leading: new Image.network(
+                            "https://news.bitcoin.com/wp-content/uploads/2017/07/black-square-logo-color-300x300.png",
+                            height: 300,
+                            width: 150,
+                        ),
+                        title: Text('BEN'),
+                        subtitle: Text(
+                            'The Blockchain Education Network (BEN) is the largest and longest running network of students, alumni, professors, across the world.'),
+                        ),
+                    ],
+                    ),
+                ),
+                ),
+            ],
+            ),
+        ),
+        );
+    }
+    }
+</code></pre>
+<p>So as we have used multiple cards to link to different websites as shown below to add another website or card copy the inkwell component and add it within the ListViewBuilder</p>
+<h1 id="webview">Webview</h1>
+<p><img alt="Ben" src="https://raw.githubusercontent.com/HariPranav/BENIMAGES/master/Screenshot_20200629-014201.jpg" /></p>
+<p>As we can see in the above OnTap property in the Inkwell property we navigate to a webview but how do we implement one ???</p>
+<p>Simple we have already imported our dependencies and we need to create a stateless widget to link the OnTap handler</p>
+<pre><code>class Ben extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+    return MaterialApp(
+    home: Scaffold(
+        appBar: AppBar(
+        title: Center(child: Text("BEN")),
+        ),
+        body: WebView(
+        initialUrl: 'https://blockchainedu.org/',
+        javascriptMode: JavascriptMode.unrestricted,
+        ),
+    ),
+    );
+}
+}
+</code></pre>
+<p>This provides the webview for the app by opening  a browser within the app itself without opening the browser by leaving the app !!!</p>
+<h1 id="third-screen">Third Screen</h1>
+<p>In the second screen of the app we have seen that there are several online free resources to learn about blockchain and different technologies .</p>
+<p>Its time to put those practical skills to use !! We need to follow a specific guide to develop an app or a product</p>
+<p>Hence our third screen has a list of documentation website of popular websites</p>
+<p><img alt="Documentation" src="https://raw.githubusercontent.com/HariPranav/BENIMAGES/master/Screenshot_20200629-014211.jpg" /></p>
+<h1 id="fourth-screen">Fourth Screen:</h1>
+<p>Once we have learnt how to build a working prototype lets launch it in a real world scenario !!</p>
+<p>The fourth screen has a list of hackathons !!</p>
+<p>Ever wonder what a hackathon is ??</p>
+<p>Don't worry , Check out this blog on a Beginners Guide to Hackathons</p>
+<p><a href="https://haripranav.github.io/Hackathons/">hackathons</a></p>
+<h1 id="conclusion">Conclusion</h1>
+<p>We now   have a cross platform app  built using only three widgets , WICKED</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.1
+Build Date UTC : 2020-06-28 21:30:26
+-->
